@@ -273,6 +273,8 @@ fbq('track', 'PageView');
       if (window.fbq) {
         fbq('trackCustom', 'DSPClick', { platform: platform });
       }
+      // Remember this choice so future visits to any release can redirect straight here.
+      document.cookie = 'preferred_dsp=' + platform + '; domain=.hearjamesbeer.com; path=/; max-age=31536000; samesite=lax';
       // Fire-and-forget: don't block navigation on this.
       fetch('/api/click', {
         method: 'POST',
