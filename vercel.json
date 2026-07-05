@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "sib.hearjamesbeer.com" }],
+      "destination": "/releases/sib/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/_fallback/index.html"
+    }
+  ]
+}
